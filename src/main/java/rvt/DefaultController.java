@@ -12,4 +12,9 @@ public class DefaultController {
     String index(@RequestParam(name="name", required=false, defaultValue="null") String name, Model model) {
         return "index";
     }
+
+    @GetMapping(value = "/abc")
+    String index2(@RequestParam(name="name", required=false, defaultValue="null") String name, Model model) {
+        return "abc";
+    }
 }
