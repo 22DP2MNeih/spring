@@ -22,6 +22,9 @@ public class DefaultController {
     @GetMapping(value = "/test")
     ModelAndView testAction() {
         ModelAndView modelAndView = new ModelAndView("/test");
+        Money macins1 = new Money(10, 9);
+        modelAndView.addObject("macins1", macins1);
         return modelAndView;
     }
+    
 }
