@@ -15,7 +15,7 @@
 
 <style>
 
-#p1 {
+.p1 {
     outline: rgb(29, 29, 29) solid 7px;
     width: 100%;
     background-color: rgb(56, 56, 56);
@@ -30,16 +30,19 @@
 .item2 { grid-area: menu; }
 .item3 { grid-area: main; }
 .item4 { grid-area: right; }
-.item5 { grid-area: footer; }
+.item6 { grid-area: main2; }
+.item7 { grid-area: right2; }
+.item5 { grid-area: header2; }
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'menu main main main right right'
-    'menu footer footer footer footer footer';
+    'header2 header2 header2 header2 header2'
+    'header header header header header'
+    'menu main main right right'
+    'menu main2 main2 right2 right2';
   gap: 10px;
-  background-color: #2196F3;
+  /*background-color: #2196F3;*/
   padding: 10px;
   
 }
@@ -60,9 +63,11 @@
 </style>
 
 <div class="grid-container" >
-    <div class="item1" th:text="${macinsResult}">result</div>
+    <div class="item5 p1" th:text="${macins1}"></div>
+    <div class="item1" th:text="${macinsResult}"></div>
     <div class="item2" id="macinsInput">input</div>
     <div class="item3">+</div>  
     <div class="item4">-</div>
-    <div class="item5"> &lt</div>
+    <div class="item6">&lt</div>
+    <div class="item7">=</div>
   </div>

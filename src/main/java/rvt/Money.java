@@ -45,6 +45,7 @@ public class Money {
 
     // Pārbauda vai šī nauda ir mazāka par citu naudas objektu
     public boolean lessThan(Money money) {
-        return euros <= money.euros() && cents < money.cents();
+        int sum = (euros - money.euros()) * 100 + cents - money.cents();
+        return sum < 0;
     }
 }
