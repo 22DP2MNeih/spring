@@ -25,8 +25,12 @@ public class DefaultController {
         ModelAndView modelAndView = new ModelAndView("/test");
         Money macins1 = new Money(10, 9);
         Money macins2 = new Money(10, 9);
+        Money macins3 = new Money(10, 9);
+
         modelAndView.addObject("macins1", macins1);
         modelAndView.addObject("macinsResult", macins2);
+        modelAndView.addObject("macinsInput", macins3);
+
         return modelAndView;
     }
 
@@ -34,7 +38,7 @@ public class DefaultController {
         // String index2(@RequestParam(name="name", required=false, defaultValue="0.00e") String name, Model model) {
         //     return "test";
         // }
-
+    //    @GetMapping(value = "/")
 
     
 }
