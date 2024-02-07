@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head>
     
@@ -72,3 +73,11 @@
     <div class="item6">&lt</div>
     <div class="item7">=</div>
   </div>
+
+  <form:form action="submitForm" modelAttribute="reservation">  
+        First name: <form:input path="firstName" />         
+        <br><br>  
+        Last name: <form:input path="lastName" />  
+        <br><br>  
+        <input type="submit" value="Submit" />      
+    </form:form>
